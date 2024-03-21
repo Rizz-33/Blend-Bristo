@@ -41,10 +41,29 @@ class LoginPage extends StatelessWidget {
 
             SizedBox(height: 20,),
             //sign in button
-            MyButton(text: 'Login', onTap: () {  },)
+            MyButton(text: 'Login', onTap: () {  },),
         
-        
+            SizedBox(height: 20,),
             //not a member? register now
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Not a member?',
+                  style: TextStyle(
+                    color: Theme.of(context).colorScheme.inversePrimary
+                  ),
+                ),
+                SizedBox(width: 4,),
+                Text(
+                  'Register now',
+                  style: TextStyle(
+                    color: Theme.of(context).colorScheme.inversePrimary,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            )
           ],
         ),
       ),
