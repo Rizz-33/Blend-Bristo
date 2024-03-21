@@ -30,9 +30,18 @@ class _LoginPageState extends State<LoginPage> {
               image: AssetImage('lib/images/LogoColored.png'),
               width: 250,
             ),
+            SizedBox(height: 20,),
             //message and app slogan
             Text(
-              'Blend Bristo',
+              "Let's get something",
+              style: TextStyle(
+                fontSize: 16,
+                color: Theme.of(context).colorScheme.inversePrimary,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            Text(
+              'Good to see you back!',
               style: TextStyle(
                 fontSize: 16,
                 color: Theme.of(context).colorScheme.inversePrimary,

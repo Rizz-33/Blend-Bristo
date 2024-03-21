@@ -30,9 +30,18 @@ class _RegisterPageState extends State<RegisterPage> {
               image: AssetImage('lib/images/LogoColored.png'),
               width: 250,
             ),
+            SizedBox(height: 20,),
             //message and app slogan
             Text(
-              'Blend Bristo',
+              'Getting Started',
+              style: TextStyle(
+                fontSize: 16,
+                color: Theme.of(context).colorScheme.inversePrimary,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            Text(
+              'Create account to continue!',
               style: TextStyle(
                 fontSize: 16,
                 color: Theme.of(context).colorScheme.inversePrimary,
