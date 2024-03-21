@@ -1,4 +1,4 @@
-import 'package:blend_bristo/pages/login.dart';
+import 'package:blend_bristo/pages/register.dart';
 import 'package:blend_bristo/themes/themeProvider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginPage(onTap: () {  },),
+      home: RegisterPage(onTap: () {  },),
       theme: Provider.of<ThemeProvider>(context).themeData,
     );
   }
