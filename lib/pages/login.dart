@@ -1,7 +1,12 @@
+import 'package:blend_bristo/components/textfield.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+
+  LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +34,7 @@ class LoginPage extends StatelessWidget {
 
             SizedBox(height: 25,),
             //email textfield
-        
+            MyTextField(controller: emailController, hintText: 'Email', obscureText: false)
         
             //password textfield
         
