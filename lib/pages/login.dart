@@ -26,7 +26,8 @@ class LoginPage extends StatelessWidget {
                 color: Theme.of(context).colorScheme.inversePrimary,
               ),
             ),
-        
+
+            SizedBox(height: 25,),
             //email textfield
         
         
