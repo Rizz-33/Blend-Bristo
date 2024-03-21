@@ -2,12 +2,20 @@ import 'package:blend_bristo/components/button.dart';
 import 'package:blend_bristo/components/textfield.dart';
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
+  final Function()? onTap;
 
+
+  LoginPage({super.key, required this.onTap});
+
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
   final TextEditingController emailController = TextEditingController();
-  final TextEditingController passwordController = TextEditingController();
 
-  LoginPage({super.key});
+  final TextEditingController passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -55,11 +63,14 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
                 SizedBox(width: 4,),
-                Text(
-                  'Register now',
-                  style: TextStyle(
-                    color: Theme.of(context).colorScheme.inversePrimary,
-                    fontWeight: FontWeight.bold,
+                GestureDetector(
+                  onTap: widget.onTap,
+                  child: Text(
+                    'Register now',
+                    style: TextStyle(
+                      color: Theme.of(context).colorScheme.inversePrimary,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
               ],
