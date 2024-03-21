@@ -1,4 +1,7 @@
+import 'package:blend_bristo/themes/themeProvider.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class SettingsPage extends StatelessWidget {
   const SettingsPage({super.key});
@@ -27,12 +30,12 @@ class SettingsPage extends StatelessWidget {
             Text("Dark Mode"),
         
             //switch
-            // CupertinoSwitch(
-            //   value: Provider.of<ThemeProvider>(context, listen: false).isDarkMode,
-            //   onChanged: (value) =>
-            //     Provider.of<ThemeProvider>(context, listen: false).toggleTheme(),
-            //   activeColor: Theme.of(context).colorScheme.primary,
-            // )
+            CupertinoSwitch(
+              value: Provider.of<ThemeProvider>(context, listen: false).isDarkMode,
+              onChanged: (value) =>
+                Provider.of<ThemeProvider>(context, listen: false).toggleTheme(),
+              activeColor: Theme.of(context).colorScheme.primary,
+            )
           ],
         ),
       ),
