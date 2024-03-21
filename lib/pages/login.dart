@@ -16,9 +16,16 @@ class LoginPage extends StatelessWidget {
               Icons.login,
               size: 100,
             ),
-        
+
+            SizedBox(height: 25,),
             //message and app slogan
-        
+            Text(
+              'Blend Bristo',
+              style: TextStyle(
+                fontSize: 16,
+                color: Theme.of(context).colorScheme.inversePrimary,
+              ),
+            ),
         
             //email textfield
         
