@@ -7,25 +7,28 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
-      body: Column(
-        children: [
-          //logo
-
-
-          //message and app slogan
-
-
-          //email textfield
-
-
-          //password textfield
-
-
-          //sign in button
-
-
-          //not a member? register now
-        ],
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            //logo
+        
+        
+            //message and app slogan
+        
+        
+            //email textfield
+        
+        
+            //password textfield
+        
+        
+            //sign in button
+        
+        
+            //not a member? register now
+          ],
+        ),
       ),
     );
   }
