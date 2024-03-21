@@ -1,8 +1,15 @@
 import 'package:blend_bristo/pages/login.dart';
+import 'package:blend_bristo/themes/themeProvider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => ThemeProvider(),
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -14,6 +21,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: LoginPage(),
+      theme: Provider.of<ThemeProvider>(context).themeData,
     );
   }
 }
