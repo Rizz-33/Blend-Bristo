@@ -12,7 +12,10 @@ class LoginPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             //logo
-        
+            Icon(
+              Icons.login,
+              size: 100,
+            ),
         
             //message and app slogan
         
