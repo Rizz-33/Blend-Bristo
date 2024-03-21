@@ -1,3 +1,4 @@
+import 'package:blend_bristo/components/button.dart';
 import 'package:blend_bristo/components/textfield.dart';
 import 'package:flutter/material.dart';
 
@@ -40,6 +41,7 @@ class LoginPage extends StatelessWidget {
 
             SizedBox(height: 20,),
             //sign in button
+            MyButton(text: 'Login', onTap: () {  },)
         
         
             //not a member? register now
