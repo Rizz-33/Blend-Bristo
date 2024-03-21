@@ -1,5 +1,6 @@
 import 'package:blend_bristo/components/button.dart';
 import 'package:blend_bristo/components/textfield.dart';
+import 'package:blend_bristo/pages/home.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -14,8 +15,11 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   final TextEditingController emailController = TextEditingController();
-
   final TextEditingController passwordController = TextEditingController();
+
+  void login() {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +62,7 @@ class _LoginPageState extends State<LoginPage> {
 
             SizedBox(height: 20,),
             //sign in button
-            MyButton(text: 'Login', onTap: () {  },),
+            MyButton(text: 'Login', onTap: login,),
         
             SizedBox(height: 20,),
             //not a member? register now
