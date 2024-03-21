@@ -1,8 +1,8 @@
 import 'package:blend_bristo/pages/settings.dart';
 import 'package:flutter/material.dart';
 
-class CustomDrawer extends StatelessWidget {
-  const CustomDrawer({super.key});
+class MyDrawer extends StatelessWidget {
+  const MyDrawer({super.key});
 
   void logout(){
     //get auth service
@@ -22,16 +22,16 @@ class CustomDrawer extends StatelessWidget {
             children: [
               DrawerHeader(child:
                 Image.asset(
-                  'lib/images/logo.png',
-                  width: 240,
+                  'lib/images/LogoColored.png',
+                  width: 320,
                 )),
               
               //home list title
               Padding(
                 padding: const EdgeInsets.only(left: 25.0),
                 child: ListTile(
-                  title: Text("H O M E", style: TextStyle(color: Colors.grey[700]),),
-                  leading: Icon(Icons.home, color: Colors.grey[600],),
+                  title: Text("Home", style: TextStyle(color: Theme.of(context).colorScheme.primary),),
+                  leading: Icon(Icons.home, color: Theme.of(context).colorScheme.primary),
                   onTap: (){
                     //pop drawer
                     Navigator.pop(context);
@@ -43,8 +43,8 @@ class CustomDrawer extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 25.0),
                 child: ListTile(
-                  title: Text("S E T T I N G S", style: TextStyle(color: Colors.grey[700]),),
-                  leading: Icon(Icons.settings, color: Colors.grey[600],),
+                  title: Text("Settings", style: TextStyle(color: Theme.of(context).colorScheme.primary),),
+                  leading: Icon(Icons.settings, color: Theme.of(context).colorScheme.primary),
                   onTap: (){
                     //pop drawer
                     Navigator.pop(context);
@@ -64,8 +64,8 @@ class CustomDrawer extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: 25.0, bottom: 25),
             child: ListTile(
-              title: Text("L O G O U T", style: TextStyle(color: Colors.grey[700]),),
-              leading: Icon(Icons.logout, color: Colors.grey[600],),
+              title: Text("Logout", style: TextStyle(color: Theme.of(context).colorScheme.primary),),
+              leading: Icon(Icons.logout, color: Theme.of(context).colorScheme.primary),
               onTap: logout,
             ),
           )
