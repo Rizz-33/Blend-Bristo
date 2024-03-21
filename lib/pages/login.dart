@@ -6,8 +6,7 @@ import 'package:flutter/material.dart';
 class LoginPage extends StatefulWidget {
   final Function()? onTap;
 
-
-  LoginPage({super.key, required this.onTap});
+  LoginPage({Key? key, required this.onTap});
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -26,69 +25,67 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            //logo
-            Image(
-              image: AssetImage('lib/images/LogoColored.png'),
-              width: 250,
-            ),
-            SizedBox(height: 20,),
-            //message and app slogan
-            Text(
-              "Let's get something",
-              style: TextStyle(
-                fontSize: 16,
-                color: Theme.of(context).colorScheme.inversePrimary,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            Text(
-              'Good to see you back!',
-              style: TextStyle(
-                fontSize: 16,
-                color: Theme.of(context).colorScheme.inversePrimary,
-              ),
-            ),
-
-            SizedBox(height: 25,),
-            //email textfield
-            MyTextField(controller: emailController, hintText: 'Email', obscureText: false),
-
-            SizedBox(height: 20,),
-            //password textfield
-            MyTextField(controller: passwordController, hintText: 'Password', obscureText: true),
-
-            SizedBox(height: 20,),
-            //sign in button
-            MyButton(text: 'Login', onTap: login,),
-        
-            SizedBox(height: 20,),
-            //not a member? register now
-            Row(
+        child: SingleChildScrollView(
+          child: Center(
+            child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                Image(
+                  image: AssetImage('lib/images/LogoColored.png'),
+                  width: 250,
+                ),
+                SizedBox(height: 20,),
                 Text(
-                  'Not a member?',
+                  "Let's get something",
                   style: TextStyle(
-                    color: Theme.of(context).colorScheme.inversePrimary
+                    fontSize: 20,
+                    color: Theme.of(context).colorScheme.inversePrimary,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(width: 4,),
-                GestureDetector(
-                  onTap: widget.onTap,
-                  child: Text(
-                    'Register now',
-                    style: TextStyle(
-                      color: Theme.of(context).colorScheme.inversePrimary,
-                      fontWeight: FontWeight.bold,
+                Text(
+                  'Good to see you back!',
+                  style: TextStyle(
+                    fontSize: 14,
+                    color: Colors.grey[600],
+                  ),
+                ),
+        
+                SizedBox(height: 25,),
+                MyTextField(controller: emailController, hintText: 'Email', obscureText: false),
+        
+                SizedBox(height: 20,),
+                MyTextField(controller: passwordController, hintText: 'Password', obscureText: true),
+        
+                SizedBox(height: 20,),
+                MyButton(text: 'Login', onTap: login,),
+        
+                SizedBox(height: 20,),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Not a member?',
+                      style: TextStyle(
+                        color: Theme.of(context).colorScheme.inversePrimary
+                      ),
                     ),
-                  ),
-                ),
+                    SizedBox(width: 4,),
+                    GestureDetector(
+                      onTap: widget.onTap,
+                      child: Text(
+                        'Register now',
+                        style: TextStyle(
+                          color: Theme.of(context).colorScheme.inversePrimary,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ],
+                )
               ],
-            )
-          ],
+            ),
+          ),
         ),
       ),
     );

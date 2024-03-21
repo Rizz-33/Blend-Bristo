@@ -14,6 +14,7 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text('data'),
       ),
+      drawer: Drawer(),
     );
   }
 }
