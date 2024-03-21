@@ -17,12 +17,10 @@ class LoginPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             //logo
-            Icon(
-              Icons.login,
-              size: 100,
+            Image(
+              image: AssetImage('lib/images/LogoColored.png'),
+              width: 250,
             ),
-
-            SizedBox(height: 25,),
             //message and app slogan
             Text(
               'Blend Bristo',
