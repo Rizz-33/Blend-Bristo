@@ -53,7 +53,23 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
             ),
           ),
         ],
-        body: Container(color: Theme.of(context).colorScheme.tertiary,)
+        body: TabBarView(
+          controller: tabController,
+          children: [
+            ListView.builder(
+              itemCount: 5,
+              itemBuilder: (context, index) => Text('data')
+            ),
+            ListView.builder(
+              itemCount: 5,
+              itemBuilder: (context, index) => Text('data')
+            ),
+            ListView.builder(
+              itemCount: 5,
+              itemBuilder: (context, index) => Text('data')
+            ),
+          ]
+        ),
       ),
     );
   }
