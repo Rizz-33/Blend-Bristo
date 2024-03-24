@@ -24,7 +24,6 @@ class MySilverAppbar extends StatelessWidget {
       title: Text('Blend Bristo'),
       centerTitle: true,
       flexibleSpace: FlexibleSpaceBar(
-        
         background: Padding(
           padding: const EdgeInsets.only(bottom: 50.0),
           child: child,

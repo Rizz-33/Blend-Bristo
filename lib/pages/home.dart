@@ -1,3 +1,4 @@
+import 'package:blend_bristo/components/current_location.dart';
 import 'package:blend_bristo/components/drawer.dart';
 import 'package:blend_bristo/components/silverappbar.dart';
 import 'package:flutter/material.dart';
@@ -26,7 +27,7 @@ class _HomePageState extends State<HomePage> {
                   endIndent: 25,
                   color: Theme.of(context).colorScheme.tertiary,
                 ),
-                Text('Hello'),
+                MyCurrentLocation()
               ],
             ),
             title: Text('title'),
