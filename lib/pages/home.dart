@@ -1,4 +1,5 @@
 import 'package:blend_bristo/components/current_location.dart';
+import 'package:blend_bristo/components/descriptionbox.dart';
 import 'package:blend_bristo/components/drawer.dart';
 import 'package:blend_bristo/components/silverappbar.dart';
 import 'package:flutter/material.dart';
@@ -19,6 +20,7 @@ class _HomePageState extends State<HomePage> {
         headerSliverBuilder: (context, innerBoxIsScrolled) =>
         [
           MySilverAppbar(
+            title: Text('title'),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
@@ -27,10 +29,12 @@ class _HomePageState extends State<HomePage> {
                   endIndent: 25,
                   color: Theme.of(context).colorScheme.tertiary,
                 ),
-                MyCurrentLocation()
+
+                MyCurrentLocation(),
+
+                MyDescrptionBox(),
               ],
             ),
-            title: Text('title'),
           ),
         ],
         body: Container(color: Theme.of(context).colorScheme.tertiary,)
