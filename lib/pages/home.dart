@@ -2,6 +2,7 @@ import 'package:blend_bristo/components/current_location.dart';
 import 'package:blend_bristo/components/descriptionbox.dart';
 import 'package:blend_bristo/components/drawer.dart';
 import 'package:blend_bristo/components/silverappbar.dart';
+import 'package:blend_bristo/components/tabbar.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -11,7 +12,22 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin {
+
+  late TabController tabController;
+
+  @override
+  void initState() {
+    super.initState();
+    tabController = TabController(length: 3, vsync: this);
+  }
+
+  @override
+  void dispose() {
+    tabController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +36,7 @@ class _HomePageState extends State<HomePage> {
         headerSliverBuilder: (context, innerBoxIsScrolled) =>
         [
           MySilverAppbar(
-            title: Text('title'),
+            title: MyTabBar(tabController: tabController),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
