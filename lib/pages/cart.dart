@@ -8,7 +8,15 @@ class CartPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Consumer<Restaurant> (builder: (context, restaurant, child) {
+      //cart
+      final userCart = restaurant.cart;
 
+      //screen
+      return Scaffold(
+        appBar: AppBar(
+          title: Text('data'),
+        ),
+      );
     });
   }
 }
