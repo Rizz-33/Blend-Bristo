@@ -1,3 +1,4 @@
+import 'package:blend_bristo/pages/cart.dart';
 import 'package:flutter/material.dart';
 
 class MySilverAppbar extends StatelessWidget {
@@ -15,7 +16,15 @@ class MySilverAppbar extends StatelessWidget {
       pinned: true,
       actions: [
         IconButton(
-          onPressed: () {},
+          onPressed: () {
+            //go to cart
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => CartPage(),
+              )
+            );
+          },
           icon: Icon(Icons.shopping_cart)
         )
       ],
