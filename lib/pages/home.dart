@@ -1,6 +1,7 @@
 import 'package:blend_bristo/components/current_location.dart';
 import 'package:blend_bristo/components/descriptionbox.dart';
 import 'package:blend_bristo/components/drawer.dart';
+import 'package:blend_bristo/components/foodtile.dart';
 import 'package:blend_bristo/components/silverappbar.dart';
 import 'package:blend_bristo/components/tabbar.dart';
 import 'package:blend_bristo/models/food.dart';
@@ -44,8 +45,12 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
         physics: NeverScrollableScrollPhysics(),
         padding: EdgeInsets.zero,
         itemBuilder: (context, index) {
-          return ListTile(
-            title: Text(categoryMenu[index].name),
+          final food = categoryMenu[index];
+          return MyFoodTile(
+            food: food,
+            onTap: (){
+              
+            }
           );
         }
       );

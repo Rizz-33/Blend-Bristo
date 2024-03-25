@@ -24,7 +24,10 @@ class MyFoodTile extends StatelessWidget {
                   ],
                 )
               ),
-              Image.asset(food.imagePath),
+              Image(
+                image: AssetImage(food.imagePath),
+                height: 150,
+              ),
             ],
           ),
         )
