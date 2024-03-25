@@ -13,6 +13,33 @@ class MyCartTile extends StatelessWidget {
     return Consumer<Restaurant>(builder: (context, restaurant, child) => Container(
       child: Column(
         children: [
+          Row(
+            children: [
+              //food image
+              Image.asset(
+                cartItem.food.imagePath,
+                height: 80,
+              ),
+
+              SizedBox(width: 10,),
+
+              //name and price
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  //food name
+                  Text(cartItem.food.name),
+
+                  //food price
+                  Text(cartItem.food.price.toString()+" LKR"),
+
+                ],
+              )
+
+              //increment of decrement quantity
+            ],
+          ),
+          //addons
 
         ],
       ),

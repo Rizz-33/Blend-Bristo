@@ -1,3 +1,4 @@
+import 'package:blend_bristo/components/carttile.dart';
 import 'package:blend_bristo/models/restaurant.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -26,12 +27,10 @@ class CartPage extends StatelessWidget {
                 itemCount: userCart.length,
                 itemBuilder: (context, index) {
                   //get individual cart item
-                  final cartitem = userCart[index];
+                  final cartItem = userCart[index];
                   
                   //return cart title
-                  return ListTile(
-                    title: Text(userCart[index].food.name),
-                  );
+                  return MyCartTile(cartItem: cartItem);
                 }
               ),
             ),
