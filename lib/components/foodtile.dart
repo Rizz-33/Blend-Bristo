@@ -30,7 +30,10 @@ class MyFoodTile extends StatelessWidget {
                         style: TextStyle(color: Theme.of(context).colorScheme.primary),
                       ),
                       SizedBox(height: 10,),
-                      Text(food.description),
+                      Text(
+                        food.description,
+                        
+                      ),
                     ],
                   )
                 ),
