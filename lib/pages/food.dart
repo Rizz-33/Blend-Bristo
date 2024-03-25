@@ -129,7 +129,7 @@ class _FoodPageState extends State<FoodPage> {
             top: 40,
             left: 10,
             child: IconButton(
-              icon: Icon(Icons.arrow_back_ios),
+              icon: Icon(Icons.arrow_back),
               onPressed: () {
                 Navigator.of(context).pop();
               },
