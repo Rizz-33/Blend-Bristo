@@ -253,9 +253,67 @@ class Restaurant extends ChangeNotifier{
       ]
     ),
     
-    
-    
-    
+    //cakes
+    Food(
+      name: "Strawberry Cheesecake",
+      description: "Savor the heavenly delight of our Strawberry Cheesecake, where luscious cheesecake meets a symphony of ripe strawberries atop a delectable graham cracker crust, creating an irresistible dessert experience.",
+      imagePath: "lib/images/cake/Strawberry Cheesecake.png",
+      price: 540,
+      category: FoodCategory.Cakes,
+      availableAddon: [
+        Addon(name: "Extra Strawberry Topping", price: 110),
+        Addon(name: "Whipped Cream", price: 80),
+        Addon(name: "Chocolate Drizzle", price: 90),
+      ]
+    ),
+    Food(
+      name: "Red Velvet Cake",
+      description: "Indulge in the velvety richness of our Red Velvet Cake, where moist layers of crimson-hued cake intertwine with luxurious cream cheese frosting, culminating in a decadent dessert sensation.",
+      imagePath: "lib/images/cake/Red Velvet Cake.png",
+      price: 440,
+      category: FoodCategory.Cakes,
+      availableAddon: [
+        Addon(name: "Cream Cheese Frosting Swirl", price: 110),
+        Addon(name: "White Chocolate Shavings", price: 100),
+        Addon(name: "Raspberry Coulis Drizzle", price: 80),
+      ]
+    ),
+    Food(
+      name: "Chocolate Cake",
+      description: "Dive into pure chocolate ecstasy with our Chocolate Cake, a heavenly creation boasting layers of rich, moist chocolate cake enveloped in smooth, indulgent chocolate frosting, promising a decadent treat for your taste buds.",
+      imagePath: "lib/images/cake/Chocolate Cake.png",
+      price: 320,
+      category: FoodCategory.Cakes,
+      availableAddon: [
+        Addon(name: "Extra Chocolate Ganache", price: 80),
+        Addon(name: "Vanilla Ice Cream Scoop", price: 100),
+        Addon(name: "Caramel Drizzle", price: 80),
+      ]
+    ),
+    Food(
+      name: "Carrot Cake",
+      description: "Discover the timeless indulgence of our Carrot Cake, featuring layers of moist cake infused with aromatic spices and freshly grated carrots, crowned with a luxurious cream cheese frosting, promising a delightfully nostalgic treat for your taste buds.",
+      imagePath: "lib/images/cake/Carrot Cake.png",
+      price: 320,
+      category: FoodCategory.Cakes,
+      availableAddon: [
+        Addon(name: "Walnut Pieces", price: 120),
+        Addon(name: "Raisins", price: 70),
+        Addon(name: "Caramel Drizzle", price: 80),
+      ]
+    ),
+    Food(
+      name: "Organic Coffee Cake",
+      description: "Dive into the rich aroma and irresistible flavor of our Organic Coffee Cake, where every bite is a celebration of buttery goodness infused with the bold essence of freshly brewed coffee, crowned with a heavenly cinnamon streusel topping.",
+      imagePath: "lib/images/cake/Organic Coffee Cake.png",
+      price: 320,
+      category: FoodCategory.Cakes,
+      availableAddon: [
+        Addon(name: "Extra Streusel Topping", price: 150),
+        Addon(name: "Vanilla Glaze", price: 80),
+        Addon(name: "Toasted Almonds", price: 140),
+      ]
+    ),
   ];
   
   List<Food> get menu => _menu;
