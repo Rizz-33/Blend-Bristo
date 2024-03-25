@@ -80,42 +80,6 @@ class Restaurant extends ChangeNotifier{
       ]
     ),
     Food(
-      name: "Mango Tea",
-      description: "Embark on a refreshing journey with our Mango Tea, crafted with the finest tea leaves infused with the tropical sweetness of ripe mangoes, offering a tantalizing fusion of flavors with each invigorating sip.",
-      imagePath: "lib/images/tea/Mango Tea.png",
-      price: 400,
-      category: FoodCategory.Teas,
-      availableAddon: [
-        Addon(name: "Honey", price: 150),
-        Addon(name: "Mint Leaves", price: 80),
-        Addon(name: "Lemon Wedge", price: 120),
-      ]
-    ),
-    Food(
-      name: "Iced Tea",
-      description: "Indulge in a refreshing concoction of chilled tea, infused with your choice of fruity flavors, offering a revitalizing experience with every sip.",
-      imagePath: "lib/images/tea/Iced Tea.png",
-      price: 700,
-      category: FoodCategory.Teas,
-      availableAddon: [
-        Addon(name: "Lemon Slice", price: 100),
-        Addon(name: "Mint Leaves", price: 70),
-        Addon(name: "Simple Syrup", price: 80)
-      ]
-    ),
-    Food(
-      name: "Lemon Tea",
-      description: "Refresh your senses with our Lemon Tea, a harmonious infusion of zesty lemon and aromatic tea leaves, creating a revitalizing beverage perfect for any time of the day.",
-      imagePath: "lib/images/tea/Lemon Tea.png",
-      price: 400,
-      category: FoodCategory.Teas,
-      availableAddon: [
-        Addon(name: "Honey", price: 150),
-        Addon(name: "Mint Leaves", price: 80),
-        Addon(name: "Lemon Wedge", price: 120),
-      ]
-    ),
-    Food(
       name: "Apple Tea",
       description: "Indulge in a harmonious infusion of crisp apple essence, complemented by fragrant tea leaves, offering a refreshing experience with every sip.",
       imagePath: "lib/images/tea/Apple Tea.png",
@@ -127,6 +91,43 @@ class Restaurant extends ChangeNotifier{
         Addon(name: "Lemon Slice", price: 100)
       ]
     ),
+    Food(
+      name: "Mango Tea",
+      description: "Embark on a refreshing journey with our Mango Tea, crafted with the finest tea leaves infused with the tropical sweetness of ripe mangoes, offering a tantalizing fusion of flavors with each invigorating sip.",
+      imagePath: "lib/images/tea/Mango Tea.png",
+      price: 1000,
+      category: FoodCategory.Teas,
+      availableAddon: [
+        Addon(name: "Honey", price: 150),
+        Addon(name: "Mint Leaves", price: 80),
+        Addon(name: "Lemon Wedge", price: 120),
+      ]
+    ),
+    Food(
+      name: "Iced Tea",
+      description: "Indulge in a refreshing concoction of chilled tea, infused with your choice of fruity flavors, offering a revitalizing experience with every sip.",
+      imagePath: "lib/images/tea/Iced Tea.png",
+      price: 900,
+      category: FoodCategory.Teas,
+      availableAddon: [
+        Addon(name: "Lemon Slice", price: 100),
+        Addon(name: "Mint Leaves", price: 70),
+        Addon(name: "Simple Syrup", price: 80)
+      ]
+    ),
+    Food(
+      name: "Lemon Tea",
+      description: "Refresh your senses with our Lemon Tea, a harmonious infusion of zesty lemon and aromatic tea leaves, creating a revitalizing beverage perfect for any time of the day.",
+      imagePath: "lib/images/tea/Lemon Tea.png",
+      price: 850,
+      category: FoodCategory.Teas,
+      availableAddon: [
+        Addon(name: "Honey", price: 150),
+        Addon(name: "Mint Leaves", price: 80),
+        Addon(name: "Lemon Wedge", price: 120),
+      ]
+    ),
+    
 
     //wraps
     Food(
