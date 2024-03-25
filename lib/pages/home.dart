@@ -6,6 +6,7 @@ import 'package:blend_bristo/components/silverappbar.dart';
 import 'package:blend_bristo/components/tabbar.dart';
 import 'package:blend_bristo/models/food.dart';
 import 'package:blend_bristo/models/restaurant.dart';
+import 'package:blend_bristo/pages/food.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -49,7 +50,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
           return MyFoodTile(
             food: food,
             onTap: (){
-              
+              Navigator.push(context, MaterialPageRoute(builder: (context) => FoodPage(food: food)));
             }
           );
         }
