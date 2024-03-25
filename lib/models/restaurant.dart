@@ -1,4 +1,6 @@
+import 'package:blend_bristo/models/cartitem.dart';
 import 'package:blend_bristo/models/food.dart';
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 
 class Restaurant extends ChangeNotifier{
@@ -318,7 +320,36 @@ class Restaurant extends ChangeNotifier{
   
   List<Food> get menu => _menu;
 
+  //cart
+  final List<CartItem> _cart = [];
+
   //add to cart
+  void addToCart(Food food, List<Addon> selectedAddons){
+    //see if there is a cart item already with the same food and selected addons
+    CartItem? cartIem = _cart.firstWhereOrNull((item) {
+      //check if the food items are same
+      bool isSameFood = item.food == food;
+
+      //check if the list of selected addons are same
+      bool isSameAddons = ListEquality().equals(item.selectedAddons, selectedAddons);
+
+      return isSameFood && isSameAddons;
+    });
+
+    //if the item already exists, increase it's quantity
+    if (cartIem != null) {
+      cartIem.quantity++;
+    } //otherwise add a new cart item to the cart
+    else {
+      _cart.add(
+        CartItem(
+          food: food,
+          selectedAddons: selectedAddons
+        ),
+      );
+    }
+    notifyListeners();
+  }
 
   //remove from cart
 
