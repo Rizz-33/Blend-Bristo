@@ -126,7 +126,68 @@ class Restaurant {
         Addon(name: "Lemon Slice", price: 100)
       ]
     ),
-    
+
+    //wraps
+    Food(
+      name: "Minced Beef Wraps",
+      description: "Savor the rich taste of seasoned minced beef, complemented by crisp veggies and a zesty sauce, all wrapped snugly in a soft tortilla for a flavorful experience.",
+      imagePath: "lib/images/wraps/Minced Beef Wraps.png",
+      price: 840,
+      category: FoodCategory.Wraps,
+      availableAddon: [
+        Addon(name: "Guacamole", price: 180),
+        Addon(name: "Bacon Strips", price: 230),
+        Addon(name: "Jalapeno Slices", price: 150)
+      ]
+    ),
+    Food(
+      name: "Stuffed Seafood Wrap",
+      description: "Indulge in a delectable stuffed seafood wrap featuring a medley of flavorful seafood, crisp veggies, and savory sauce, all enclosed in a soft tortilla, ensuring a delightful taste sensation with every bite.",
+      imagePath: "lib/images/wraps/Stuffed Seafood Wrap.png",
+      price: 790,
+      category: FoodCategory.Wraps,
+      availableAddon: [
+        Addon(name: "Avocado Slices", price: 170),
+        Addon(name: "Crabmeat", price: 210),
+        Addon(name: "Pickled Shrimp", price: 190)
+      ]
+    ),
+    Food(
+      name: "Crispy Chicken Wraps",
+      description: "Experience the perfect blend of succulent crispy chicken, fresh veggies, and zesty sauce, all wrapped snugly in a soft tortilla, delivering a burst of flavor in every bite.",
+      imagePath: "lib/images/wraps/Crispy Chicken Wraps.png",
+      price: 690,
+      category: FoodCategory.Wraps,
+      availableAddon: [
+        Addon(name: "Guacamole", price: 180),
+        Addon(name: "Bacon Strips", price: 230),
+        Addon(name: "Jalapeno Slices", price: 150)
+      ]
+    ),
+    Food(
+      name: "Salmon and Egg Wraps",
+      description: "Dive into a delightful combination of smoked salmon, fluffy scrambled eggs, and crisp lettuce, all carefully enveloped in a soft tortilla, offering a burst of flavors with every mouthful.",
+      imagePath: "lib/images/wraps/Salmon and Egg Wraps.png",
+      price: 630,
+      category: FoodCategory.Wraps,
+      availableAddon: [
+        Addon(name: "Guacamole", price: 180),
+        Addon(name: "Bacon Strips", price: 230),
+        Addon(name: "Jalapeno Slices", price: 150)
+      ]
+    ),
+    Food(
+      name: "Veggie Wrap",
+      description: "Indulge in a delightful combination of fresh vegetables, vibrant flavors, and zesty sauce, all wrapped snugly in a soft tortilla, ensuring a burst of flavor with every bite.",
+      imagePath: "lib/images/wraps/Veggie Wrap.png",
+      price: 590,
+      category: FoodCategory.Wraps,
+      availableAddon: [
+        Addon(name: "Guacamole", price: 180),
+        Addon(name: "Jalapeno Slices", price: 150),
+        Addon(name: "Tomato Salsa", price: 120)
+      ]
+    ),
   ];
   
   List<Food> get menu => _menu;
