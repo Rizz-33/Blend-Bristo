@@ -2,19 +2,19 @@
 
 class Food {
   final String name;
-  final String descritption;
+  final String description;
   final String imagePath;
   final double price;
   final FoodCategory category;
-  List<Addon> availableAdddon;
+  List<Addon> availableAddon;
 
   Food({
     required this.name,
-    required this.descritption,
+    required this.description,
     required this.imagePath,
     required this.price,
     required this.category,
-    required this.availableAdddon,
+    required this.availableAddon,
   });
 }
 
