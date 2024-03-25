@@ -192,6 +192,30 @@ class Restaurant extends ChangeNotifier{
 
     //drinks
     Food(
+      name: "Strawberry-Banana Smoothie",
+      description: "Savor the luscious blend of ripe strawberries and creamy bananas, expertly crafted into a smooth and refreshing beverage, perfect for a delightful indulgence any time of day.",
+      imagePath: "lib/images/drink/Strawberry-Banana Smoothie.png",
+      price: 890,
+      category: FoodCategory.Drinks,
+      availableAddon: [
+        Addon(name: "Protein Powder", price: 260),
+        Addon(name: "Chia Seeds", price: 120),
+        Addon(name: "Greek Yogurt", price: 230)
+      ]
+    ),
+    Food(
+      name: "Mango-Yourgut Smoothie",
+      description: "Enjoy the tropical goodness of mango blended with the probiotic power of yogurt, creating a creamy and refreshing smoothie that's both delicious and good for your gut.",
+      imagePath: "lib/images/drink/Mango-Yourgut Smoothie.png",
+      price: 890,
+      category: FoodCategory.Drinks,
+      availableAddon: [
+        Addon(name: "Spinach", price: 260),
+        Addon(name: "Chia Seeds", price: 120),
+        Addon(name: "Coconut Flakes", price: 230)
+      ]
+    ),
+    Food(
       name: "Strawberry Milkshake",
       description: "Indulge in the creamy sweetness with our classic strawberry milkshake",
       imagePath: "lib/images/drink/Strawberry Milkshake.png",
@@ -227,30 +251,7 @@ class Restaurant extends ChangeNotifier{
         Addon(name: "Cherry on Top", price: 50)
       ]
     ),
-    Food(
-      name: "Veggie Wrap",
-      description: "Indulge in a delightful combination of fresh vegetables, vibrant flavors, and zesty sauce, all wrapped snugly in a soft tortilla, ensuring a burst of flavor with every bite.",
-      imagePath: "lib/images/drink/Veggie Wrap.png",
-      price: 590,
-      category: FoodCategory.Drinks,
-      availableAddon: [
-        Addon(name: "Guacamole", price: 180),
-        Addon(name: "Jalapeno Slices", price: 150),
-        Addon(name: "Tomato Salsa", price: 120)
-      ]
-    ),
-    Food(
-      name: "Veggie Wrap",
-      description: "Indulge in a delightful combination of fresh vegetables, vibrant flavors, and zesty sauce, all wrapped snugly in a soft tortilla, ensuring a burst of flavor with every bite.",
-      imagePath: "lib/images/drink/Veggie Wrap.png",
-      price: 590,
-      category: FoodCategory.Drinks,
-      availableAddon: [
-        Addon(name: "Guacamole", price: 180),
-        Addon(name: "Jalapeno Slices", price: 150),
-        Addon(name: "Tomato Salsa", price: 120)
-      ]
-    ),
+    
     
     
     
