@@ -32,11 +32,11 @@ class MyFoodTile extends StatelessWidget {
                       SizedBox(height: 10,),
                       Text(
                         food.description,
-                        
                       ),
                     ],
                   )
                 ),
+                SizedBox(width: 10,),
                 Image(
                   image: AssetImage(food.imagePath),
                   height: 120,
@@ -45,7 +45,9 @@ class MyFoodTile extends StatelessWidget {
             ),
           ),
         ),
-        Divider(color: Theme.of(context).colorScheme.tertiary,)
+        Divider(
+          color: Theme.of(context).colorScheme.tertiary,
+        )
       ],
     );
   }
