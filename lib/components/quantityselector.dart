@@ -11,6 +11,42 @@ class MyQuantitySelector extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Container(
+      decoration: BoxDecoration(
+        color: Theme.of(context).colorScheme.background,
+        borderRadius: BorderRadius.circular(50),
+      ),
+      padding: EdgeInsets.all(8),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          //decrease button
+          GestureDetector(
+            onTap: onDecrement,
+            child: Icon(
+              Icons.remove,
+              size: 20,
+              color: Theme.of(context).colorScheme.primary,
+            ),
+          ),
+
+          //quantity count
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 8.0),
+            child: Center(child: Text(quantity.toString(),)),
+          ),
+
+          //increase button
+          GestureDetector(
+            onTap: onIncrement,
+            child: Icon(
+              Icons.add,
+              size: 20,
+              color: Theme.of(context).colorScheme.primary,
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }

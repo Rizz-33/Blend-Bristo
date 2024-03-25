@@ -1,3 +1,4 @@
+import 'package:blend_bristo/components/quantityselector.dart';
 import 'package:blend_bristo/models/cartitem.dart';
 import 'package:blend_bristo/models/restaurant.dart';
 import 'package:flutter/material.dart';
@@ -34,9 +35,19 @@ class MyCartTile extends StatelessWidget {
                   Text(cartItem.food.price.toString()+" LKR"),
 
                 ],
-              )
+              ),
 
-              //increment of decrement quantity
+              //increment or decrement quantity
+              MyQuantitySelector(
+                quantity: cartItem.quantity,
+                food: cartItem.food,
+                onIncrement: (){
+                  restaurant.addToCart(cartItem.food, cartItem.selectedAddons);
+                },
+                onDecrement: (){
+                  restaurant.removeFromCart(cartItem);
+                },
+              ),
             ],
           ),
           //addons
