@@ -363,6 +363,7 @@ class Restaurant extends ChangeNotifier{
         _cart.removeAt(cartIndex);
       }
     }
+    notifyListeners();
   }
 
   //get total price of cart
