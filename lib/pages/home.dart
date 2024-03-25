@@ -3,6 +3,7 @@ import 'package:blend_bristo/components/descriptionbox.dart';
 import 'package:blend_bristo/components/drawer.dart';
 import 'package:blend_bristo/components/silverappbar.dart';
 import 'package:blend_bristo/components/tabbar.dart';
+import 'package:blend_bristo/models/food.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -19,7 +20,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
   @override
   void initState() {
     super.initState();
-    tabController = TabController(length: 3, vsync: this);
+    tabController = TabController(length: FoodCategory.values.length, vsync: this);
   }
 
   @override
@@ -56,6 +57,14 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
         body: TabBarView(
           controller: tabController,
           children: [
+            ListView.builder(
+              itemCount: 5,
+              itemBuilder: (context, index) => Text('data')
+            ),
+            ListView.builder(
+              itemCount: 5,
+              itemBuilder: (context, index) => Text('data')
+            ),
             ListView.builder(
               itemCount: 5,
               itemBuilder: (context, index) => Text('data')
