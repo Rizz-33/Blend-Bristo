@@ -4,7 +4,9 @@ import 'package:blend_bristo/components/drawer.dart';
 import 'package:blend_bristo/components/silverappbar.dart';
 import 'package:blend_bristo/components/tabbar.dart';
 import 'package:blend_bristo/models/food.dart';
+import 'package:blend_bristo/models/restaurant.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -39,7 +41,13 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
 
       return ListView.builder(
         itemCount: categoryMenu.length,
-        itemBuilder: (context, index) {}
+        physics: NeverScrollableScrollPhysics(),
+        padding: EdgeInsets.zero,
+        itemBuilder: (context, index) {
+          return ListTile(
+            title: Text(categoryMenu[index].name),
+          );
+        }
       );
     }).toList();
   }
@@ -69,31 +77,12 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
             ),
           ),
         ],
-        body: TabBarView(
+        body: Consumer<Restaurant>(
+          builder: (context, restaurant, child) => TabBarView(
           controller: tabController,
-          children: [
-            ListView.builder(
-              itemCount: 5,
-              itemBuilder: (context, index) => Text('data')
-            ),
-            ListView.builder(
-              itemCount: 5,
-              itemBuilder: (context, index) => Text('data')
-            ),
-            ListView.builder(
-              itemCount: 5,
-              itemBuilder: (context, index) => Text('data')
-            ),
-            ListView.builder(
-              itemCount: 5,
-              itemBuilder: (context, index) => Text('data')
-            ),
-            ListView.builder(
-              itemCount: 5,
-              itemBuilder: (context, index) => Text('data')
-            ),
-          ]
+          children: getFoodInThisCategory(restaurant.menu),
         ),
+        )
       ),
     );
   }

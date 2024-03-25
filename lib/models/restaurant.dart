@@ -1,6 +1,7 @@
 import 'package:blend_bristo/models/food.dart';
+import 'package:flutter/material.dart';
 
-class Restaurant {
+class Restaurant extends ChangeNotifier{
   final List<Food> _menu = [
 
     //coffee
@@ -129,7 +130,7 @@ class Restaurant {
 
     //wraps
     Food(
-      name: "Minced Beef Wraps",
+      name: "Minced Beef Wrap",
       description: "Savor the rich taste of seasoned minced beef, complemented by crisp veggies and a zesty sauce, all wrapped snugly in a soft tortilla for a flavorful experience.",
       imagePath: "lib/images/wraps/Minced Beef Wraps.png",
       price: 840,
@@ -153,7 +154,7 @@ class Restaurant {
       ]
     ),
     Food(
-      name: "Crispy Chicken Wraps",
+      name: "Crispy Chicken Wrap",
       description: "Experience the perfect blend of succulent crispy chicken, fresh veggies, and zesty sauce, all wrapped snugly in a soft tortilla, delivering a burst of flavor in every bite.",
       imagePath: "lib/images/wraps/Crispy Chicken Wraps.png",
       price: 690,
@@ -165,7 +166,7 @@ class Restaurant {
       ]
     ),
     Food(
-      name: "Salmon and Egg Wraps",
+      name: "Salmon and Egg Wrap",
       description: "Dive into a delightful combination of smoked salmon, fluffy scrambled eggs, and crisp lettuce, all carefully enveloped in a soft tortilla, offering a burst of flavors with every mouthful.",
       imagePath: "lib/images/wraps/Salmon and Egg Wraps.png",
       price: 630,
@@ -188,6 +189,71 @@ class Restaurant {
         Addon(name: "Tomato Salsa", price: 120)
       ]
     ),
+
+    //drinks
+    Food(
+      name: "Strawberry Milkshake",
+      description: "Indulge in the creamy sweetness with our classic strawberry milkshake",
+      imagePath: "lib/images/drink/Strawberry Milkshake.png",
+      price: 420,
+      category: FoodCategory.Drinks,
+      availableAddon: [
+        Addon(name: "Whipped Cream", price: 70),
+        Addon(name: "Chocolate Syrup Drizzle", price: 120),
+        Addon(name: "Extra Strawberries", price: 80),
+      ]
+    ),
+    Food(
+      name: "Chocolate Milkshake",
+      description: "Indulge in creamy chocolate goodness with our Chocolate Milkshake.",
+      imagePath: "lib/images/drink/Chocolate Milkshake.png",
+      price: 380,
+      category: FoodCategory.Drinks,
+      availableAddon: [
+        Addon(name: "Whipped Cream", price: 70),
+        Addon(name: "Chocolate Syrup Drizzle", price: 120),
+        Addon(name: "Sprinkles", price: 50)
+      ]
+    ),
+    Food(
+      name: "Vanilla Milkshake",
+      description: "Indulge in the creamy goodness of a classic vanilla milkshake, crafted with the finest ingredients for a rich and satisfying treat.",
+      imagePath: "lib/images/drink/Vanilla Milkshake.png",
+      price: 380,
+      category: FoodCategory.Drinks,
+      availableAddon: [
+        Addon(name: "Sprinkles", price: 120),
+        Addon(name: "Whipped Cream", price: 70),
+        Addon(name: "Cherry on Top", price: 50)
+      ]
+    ),
+    Food(
+      name: "Veggie Wrap",
+      description: "Indulge in a delightful combination of fresh vegetables, vibrant flavors, and zesty sauce, all wrapped snugly in a soft tortilla, ensuring a burst of flavor with every bite.",
+      imagePath: "lib/images/drink/Veggie Wrap.png",
+      price: 590,
+      category: FoodCategory.Drinks,
+      availableAddon: [
+        Addon(name: "Guacamole", price: 180),
+        Addon(name: "Jalapeno Slices", price: 150),
+        Addon(name: "Tomato Salsa", price: 120)
+      ]
+    ),
+    Food(
+      name: "Veggie Wrap",
+      description: "Indulge in a delightful combination of fresh vegetables, vibrant flavors, and zesty sauce, all wrapped snugly in a soft tortilla, ensuring a burst of flavor with every bite.",
+      imagePath: "lib/images/drink/Veggie Wrap.png",
+      price: 590,
+      category: FoodCategory.Drinks,
+      availableAddon: [
+        Addon(name: "Guacamole", price: 180),
+        Addon(name: "Jalapeno Slices", price: 150),
+        Addon(name: "Tomato Salsa", price: 120)
+      ]
+    ),
+    
+    
+    
   ];
   
   List<Food> get menu => _menu;
