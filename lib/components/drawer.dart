@@ -20,10 +20,13 @@ class MyDrawer extends StatelessWidget {
           //logo
           Column(
             children: [
-              DrawerHeader(child:
-                Image.asset(
-                  'lib/images/LogoColored.png',
-                  width: 320,
+              DrawerHeader(
+                decoration: BoxDecoration( color: Theme.of(context).colorScheme.secondary),
+                child:
+                  Image.asset(
+                    'lib/images/LogoColored.png',
+                    width: 320,
+                    fit: BoxFit.cover
                 )),
               
               //home list title
