@@ -1,6 +1,8 @@
 import 'package:blend_bristo/components/button.dart';
 import 'package:blend_bristo/models/food.dart';
+import 'package:blend_bristo/models/restaurant.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class FoodPage extends StatefulWidget {
   final Food food;
@@ -17,6 +19,24 @@ class FoodPage extends StatefulWidget {
 }
 
 class _FoodPageState extends State<FoodPage> {
+  
+  //method to add to cart
+  void addToCart(Food food, Map<Addon, bool> selectedAddons){
+    //close the current food page to go back to menu
+    Navigator.pop(context);
+
+    //format the selected addons
+    List<Addon> currentlySelectedAddons = [];
+    for (Addon addon in widget.food.availableAddon) {
+      if (widget.selectedAddons[addon] == true) {
+        currentlySelectedAddons.add(addon);
+      }
+    }
+
+    //add to cart
+    context.read<Restaurant>().addToCart(food, currentlySelectedAddons);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -123,9 +143,7 @@ class _FoodPageState extends State<FoodPage> {
               padding: const EdgeInsets.only(bottom: 25.0),
               child: MyButton(
                 text: 'Add To Cart',
-                onTap: () {
-                  // Your button onTap functionality
-                },
+                onTap: () => addToCart(widget.food, widget.selectedAddons),
               ),
             ),
           ),
