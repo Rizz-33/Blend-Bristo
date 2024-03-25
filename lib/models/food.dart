@@ -20,11 +20,11 @@ class Food {
 
 
 enum FoodCategory {
-  coffeeCreations,
-  teaHaven,
-  bakeryDelights,
-  sandwichCentral,
-  specialtySips,
+  Coffees,
+  Teas,
+  Cakes,
+  Wraps,
+  Drinks,
 }
 
 class Addon {
