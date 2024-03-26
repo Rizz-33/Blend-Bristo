@@ -1,3 +1,4 @@
+import 'package:blend_bristo/components/receipt.dart';
 import 'package:flutter/material.dart';
 
 class DeliveryProgressPage extends StatelessWidget {
@@ -12,6 +13,11 @@ class DeliveryProgressPage extends StatelessWidget {
         backgroundColor: Colors.transparent,
         foregroundColor: Theme.of(context).colorScheme.primary,
         centerTitle: true,
+      ),
+      body: Column(
+        children: [
+          MyReceipt(),
+        ],
       ),
     );
   }
