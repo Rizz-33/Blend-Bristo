@@ -1,6 +1,7 @@
 import 'package:blend_bristo/components/button.dart';
 import 'package:blend_bristo/components/carttile.dart';
 import 'package:blend_bristo/models/restaurant.dart';
+import 'package:blend_bristo/pages/payment.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -87,7 +88,14 @@ class CartPage extends StatelessWidget {
             ),
 
             //button to pay
-            MyButton(text: "Go To Checkout", onTap: (){})
+            MyButton(
+              text: "Go To Checkout",
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => PaymentPage()),
+              ),
+            ),
+            SizedBox(height: 25,)
           ],
         ),
       );
