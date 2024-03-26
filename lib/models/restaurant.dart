@@ -414,6 +414,7 @@ class Restaurant extends ChangeNotifier{
     receipt.writeln(formattedDate);
     receipt.writeln();
     receipt.writeln("-----------------");
+    receipt.writeln();
 
     for (final cartItem in _cart) {
       receipt.writeln(
