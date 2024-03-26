@@ -16,14 +16,18 @@ class MyCartTile extends StatelessWidget {
         color: Theme.of(context).colorScheme.secondary,
         borderRadius: BorderRadius.circular(16)
       ),
+      margin: EdgeInsets.symmetric(horizontal: 25, vertical: 10),
       child: Column(
         children: [
           Row(
             children: [
               //food image
-              Image.asset(
-                cartItem.food.imagePath,
-                height: 80,
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Image.asset(
+                  cartItem.food.imagePath,
+                  height: 70,
+                ),
               ),
 
               SizedBox(width: 10,),
@@ -41,16 +45,21 @@ class MyCartTile extends StatelessWidget {
                 ],
               ),
 
+              Spacer(),
+
               //increment or decrement quantity
-              MyQuantitySelector(
-                quantity: cartItem.quantity,
-                food: cartItem.food,
-                onIncrement: (){
-                  restaurant.addToCart(cartItem.food, cartItem.selectedAddons);
-                },
-                onDecrement: (){
-                  restaurant.removeFromCart(cartItem);
-                },
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: MyQuantitySelector(
+                  quantity: cartItem.quantity,
+                  food: cartItem.food,
+                  onIncrement: (){
+                    restaurant.addToCart(cartItem.food, cartItem.selectedAddons);
+                  },
+                  onDecrement: (){
+                    restaurant.removeFromCart(cartItem);
+                  },
+                ),
               ),
             ],
           ),
