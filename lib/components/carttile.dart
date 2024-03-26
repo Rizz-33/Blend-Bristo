@@ -32,27 +32,28 @@ class MyCartTile extends StatelessWidget {
                     height: 70,
                   ),
                 ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(cartItem.food.name),
-                    Text("${cartItem.food.price} LKR"),
-                  ],
-                ),
-                Spacer(),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16),
-                  child: MyQuantitySelector(
-                    quantity: cartItem.quantity,
-                    food: cartItem.food,
-                    onIncrement: (){
-                      restaurant.addToCart(cartItem.food, cartItem.selectedAddons);
-                    },
-                    onDecrement: (){
-                      restaurant.removeFromCart(cartItem);
-                    },
+                  padding: const EdgeInsets.only(top: 11.0, bottom: 8, left: 8),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(cartItem.food.name),
+                      Text("${cartItem.food.price} LKR"),
+                      SizedBox(height: 10,),
+                      MyQuantitySelector(
+                        quantity: cartItem.quantity,
+                        food: cartItem.food,
+                        onIncrement: (){
+                          restaurant.addToCart(cartItem.food, cartItem.selectedAddons);
+                        },
+                        onDecrement: (){
+                          restaurant.removeFromCart(cartItem);
+                        },
+                      ),
+                    ],
                   ),
                 ),
+                
               ],
             ),
             // Addons
