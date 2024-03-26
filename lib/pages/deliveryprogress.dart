@@ -1,8 +1,28 @@
 import 'package:blend_bristo/components/receipt.dart';
+import 'package:blend_bristo/models/restaurant.dart';
+import 'package:blend_bristo/services/database/firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-class DeliveryProgressPage extends StatelessWidget {
+class DeliveryProgressPage extends StatefulWidget {
   const DeliveryProgressPage({super.key});
+
+  @override
+  State<DeliveryProgressPage> createState() => _DeliveryProgressPageState();
+}
+
+class _DeliveryProgressPageState extends State<DeliveryProgressPage> {
+  //get access to the database
+  FirestoreService db = FirestoreService();
+
+  @override
+  void initState() {
+    super.initState();
+
+    //submit order to the firestore db
+    String receipt = context.read<Restaurant>().displayCartReceipt();
+    db.saveOrderToDatabase(receipt);
+  }
 
   @override
   Widget build(BuildContext context) {
