@@ -1,3 +1,4 @@
+import 'package:blend_bristo/components/button.dart';
 import 'package:blend_bristo/components/carttile.dart';
 import 'package:blend_bristo/models/restaurant.dart';
 import 'package:flutter/material.dart';
@@ -55,25 +56,38 @@ class CartPage extends StatelessWidget {
         ),
         body: Column(
           children: [
-            userCart.isEmpty ? Expanded(
-              child: Center(
-                child: Text(
-                  "Cart is empty.",
-                  style: TextStyle(color: Theme.of(context).colorScheme.secondary),),
-              ),
-            )
-              : Expanded(
-              child: ListView.builder(
-                itemCount: userCart.length,
-                itemBuilder: (context, index) {
-                  //get individual cart item
-                  final cartItem = userCart[index];
-                  
-                  //return cart title
-                  return MyCartTile(cartItem: cartItem);
-                }
+
+
+
+            //cart item list
+            Expanded(
+              child: Column(
+                children: [
+                  userCart.isEmpty ? Expanded(
+                    child: Center(
+                      child: Text(
+                        "Cart is empty.",
+                        style: TextStyle(color: Theme.of(context).colorScheme.secondary),),
+                    ),
+                  )
+                    : Expanded(
+                    child: ListView.builder(
+                      itemCount: userCart.length,
+                      itemBuilder: (context, index) {
+                        //get individual cart item
+                        final cartItem = userCart[index];
+                        
+                        //return cart title
+                        return MyCartTile(cartItem: cartItem);
+                      }
+                    ),
+                  ),
+                ],
               ),
             ),
+
+            //button to pay
+            MyButton(text: "Go To Checkout", onTap: (){})
           ],
         ),
       );
