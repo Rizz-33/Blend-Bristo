@@ -30,7 +30,7 @@ class MyReceipt extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 25,),
-              Text("Estimated delivery tome is: ")
+              Text("Estimated delivery time is: ")
             ],
           ),
         ),

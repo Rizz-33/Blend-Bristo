@@ -1,13 +1,14 @@
 import 'package:blend_bristo/pages/settings.dart';
+import 'package:blend_bristo/services/auth/authService.dart';
 import 'package:flutter/material.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
 
   void logout(){
-    //get auth service
-    //final auth = AuthService();
-    //auth.signOut();
+    // get auth service
+    final auth = AuthService();
+    auth.signOut();
   }
 
   @override
@@ -69,7 +70,7 @@ class MyDrawer extends StatelessWidget {
             child: ListTile(
               title: Text("Logout", style: TextStyle(color: Theme.of(context).colorScheme.primary),),
               leading: Icon(Icons.logout, color: Theme.of(context).colorScheme.primary),
-              onTap: logout,
+              onTap: () => logout(),
             ),
           )
         ],

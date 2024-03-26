@@ -32,15 +32,14 @@ class MyCartTile extends StatelessWidget {
                     height: 70,
                   ),
                 ),
-                Flexible(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(cartItem.food.name),
-                      Text("${cartItem.food.price} LKR"),
-                    ],
-                  ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(cartItem.food.name),
+                    Text("${cartItem.food.price} LKR"),
+                  ],
                 ),
+                Spacer(),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16),
                   child: MyQuantitySelector(
