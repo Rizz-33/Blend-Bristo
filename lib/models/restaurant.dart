@@ -131,7 +131,6 @@ class Restaurant extends ChangeNotifier{
       ]
     ),
     
-
     //wraps
     Food(
       name: "Minced Beef Wrap",
@@ -319,11 +318,16 @@ class Restaurant extends ChangeNotifier{
     ),
   ];
   
-  List<Food> get menu => _menu;
-  List<CartItem> get cart => _cart;
-
   //cart
   final List<CartItem> _cart = [];
+
+  String _deliveryAddress = "389, Kahathuduwa, Gonapola Junction";
+
+  List<Food> get menu => _menu;
+  List<CartItem> get cart => _cart;
+  String get deliveryAddress => _deliveryAddress;
+
+  
 
   //add to cart
   void addToCart(Food food, List<Addon> selectedAddons){
@@ -399,6 +403,11 @@ class Restaurant extends ChangeNotifier{
   // clear cart
   void clearCart() {
     _cart.clear();
+    notifyListeners();
+  }
+
+  void updateDeliveryAddress(String newAddress) {
+    _deliveryAddress = newAddress;
     notifyListeners();
   }
 

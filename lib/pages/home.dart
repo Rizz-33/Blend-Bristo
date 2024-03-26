@@ -1,4 +1,4 @@
-import 'package:blend_bristo/components/current_location.dart';
+import 'package:blend_bristo/components/currentLocation.dart';
 import 'package:blend_bristo/components/descriptionbox.dart';
 import 'package:blend_bristo/components/drawer.dart';
 import 'package:blend_bristo/components/foodtile.dart';
