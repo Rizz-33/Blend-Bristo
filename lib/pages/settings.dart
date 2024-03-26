@@ -11,11 +11,11 @@ class SettingsPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(
-        title: Text('Settings'),
-        backgroundColor: Colors.transparent,
-        foregroundColor: Colors.grey,
-        elevation: 0,
-      ),
+          title: Text('Settings'),
+          backgroundColor: Colors.transparent,
+          foregroundColor: Theme.of(context).colorScheme.primary,
+          centerTitle: true,
+        ),
       body: Container(
         decoration: BoxDecoration(
           color: Theme.of(context).colorScheme.secondary,
