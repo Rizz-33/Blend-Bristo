@@ -18,16 +18,17 @@ class _PaymentPageState extends State<PaymentPage> {
   bool isCvvFocused = false;
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
-  //user wants to pay
+  // User wants to pay
   void userTappedPay() {
     if (formKey.currentState!.validate()) {
-      //only show dialog if form is valid
+      // Only show dialog if form is valid
       showDialog(
         context: context,
         builder: (context) => AlertDialog(
           title: Text("Confirm Payment"),
           content: SingleChildScrollView(
-            child: ListView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text("Card Number: $cardNumber"),
                 Text("Expiry Date: $expiryDate"),
@@ -37,22 +38,24 @@ class _PaymentPageState extends State<PaymentPage> {
             ),
           ),
           actions: [
-            //cancel button
+            // Cancel button
             TextButton(
               onPressed: () => Navigator.pop(context),
               child: Text("Cancel"),
             ),
 
-            //yes
+            // Yes
             TextButton(
-              onPressed: () => Navigator.push(
+              onPressed: () {
+              Navigator.pop(context);
+              Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => DeliveryProgressPage(),)
-              ),
+                MaterialPageRoute(builder: (context) => DeliveryProgressPage()),
+              );},
               child: Text("Yes"),
             ),
           ],
-        )
+        ),
       );
     }
   }
@@ -72,7 +75,7 @@ class _PaymentPageState extends State<PaymentPage> {
           padding: const EdgeInsets.all(20.0),
           child: Column(
             children: [
-              // credit card
+              // Credit card
               CreditCardWidget(
                 cardNumber: cardNumber,
                 expiryDate: expiryDate,
@@ -82,7 +85,9 @@ class _PaymentPageState extends State<PaymentPage> {
                 onCreditCardWidgetChange: (p0) {},
               ),
 
-              //credit card form
+              SizedBox(height: 20),
+
+              // Credit card form
               CreditCardForm(
                 cardNumber: cardNumber,
                 expiryDate: expiryDate,
