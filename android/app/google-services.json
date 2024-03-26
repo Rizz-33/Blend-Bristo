@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "332532868582",
+    "project_id": "blend-bristo",
+    "storage_bucket": "blend-bristo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:332532868582:android:eeececed27d2dd9b5ca227",
+        "android_client_info": {
+          "package_name": "com.example.blend_bristo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0R_gI0HnmFFojb4IVdwujd_X8_l53dJ8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
