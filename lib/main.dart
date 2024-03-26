@@ -1,6 +1,6 @@
 import 'package:blend_bristo/firebase_options.dart';
 import 'package:blend_bristo/models/restaurant.dart';
-import 'package:blend_bristo/services/auth/login_or_register.dart';
+import 'package:blend_bristo/services/auth/authGate.dart';
 import 'package:blend_bristo/themes/themeProvider.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginOrRegister(),
+      home: AuthGate(),
       theme: Provider.of<ThemeProvider>(context).themeData,
     );
   }

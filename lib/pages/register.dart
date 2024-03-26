@@ -1,5 +1,6 @@
 import 'package:blend_bristo/components/button.dart';
 import 'package:blend_bristo/components/textfield.dart';
+import 'package:blend_bristo/services/auth/authService.dart';
 import 'package:flutter/material.dart';
 
 class RegisterPage extends StatefulWidget {
@@ -12,9 +13,39 @@ class RegisterPage extends StatefulWidget {
 }
 
 class _RegisterPageState extends State<RegisterPage> {
-  final TextEditingController emailController = TextEditingController();
-  final TextEditingController confirmpasswordController = TextEditingController();
-  final TextEditingController passwordController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _confirmpasswordController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+
+  //register method
+  void register() async {
+    //get auth service
+    final _auth = AuthService();
+
+    //only if the passwords are matching create user
+    if (_passwordController.text == _confirmpasswordController.text) {
+      try {
+        _auth.signUpWithEmailAndPassword(
+        _emailController.text,
+        _passwordController.text);
+      } catch (e) {
+        showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: Text(e.toString()),
+        ));
+      }
+    }
+
+    //show error if passwords are mismatch
+    else {
+      showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text("Passwords don't match!"),
+      ));
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -48,16 +79,16 @@ class _RegisterPageState extends State<RegisterPage> {
                 ),
         
                 SizedBox(height: 25,),
-                MyTextField(controller: emailController, hintText: 'Email', obscureText: false),
+                MyTextField(controller: _emailController, hintText: 'Email', obscureText: false),
         
                 SizedBox(height: 20,),
-                MyTextField(controller: passwordController, hintText: 'Password', obscureText: true),
+                MyTextField(controller: _passwordController, hintText: 'Password', obscureText: true),
         
                 SizedBox(height: 20,),
-                MyTextField(controller: confirmpasswordController, hintText: 'Confirm Password', obscureText: true),
+                MyTextField(controller: _confirmpasswordController, hintText: 'Confirm Password', obscureText: true),
         
                 SizedBox(height: 20,),
-                MyButton(text: 'Register', onTap: () {  },),
+                MyButton(text: 'Register', onTap: () => register(),),
             
                 SizedBox(height: 20,),
                 Row(
