@@ -55,7 +55,14 @@ class CartPage extends StatelessWidget {
         ),
         body: Column(
           children: [
-            Expanded(
+            userCart.isEmpty ? Expanded(
+              child: Center(
+                child: Text(
+                  "Cart is empty.",
+                  style: TextStyle(color: Theme.of(context).colorScheme.secondary),),
+              ),
+            )
+              : Expanded(
               child: ListView.builder(
                 itemCount: userCart.length,
                 itemBuilder: (context, index) {
