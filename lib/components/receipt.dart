@@ -36,6 +36,7 @@ class MyReceipt extends StatelessWidget {
               Text(
                 "Estimated delivery time is: ${estimatedDeliveryTime.hour}:${estimatedDeliveryTime.minute}",
               ),
+              SizedBox(height: 25,)
             ],
           ),
         ),
