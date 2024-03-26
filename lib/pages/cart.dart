@@ -26,7 +26,26 @@ class CartPage extends StatelessWidget {
                 showDialog(
                   context: context,
                   builder: (context) => AlertDialog(
-                    title: Text("Are you sure you want to clear the cart?"),
+                    title: Text(
+                      "Are you sure you want to clear the cart?",
+                      style: TextStyle(fontSize: 20),
+                    ),
+                    actions: [
+                      //cancel
+                      TextButton(
+                        onPressed: () => Navigator.pop(context),
+                        child: Text('Cancel'),
+                      ),
+
+                      //yes
+                      TextButton(
+                        onPressed: () {
+                          Navigator.pop(context);
+                          restaurant.clearCart();
+                        },
+                        child: Text('Yes'),
+                      ),
+                    ],
                   )
                 );
               },
