@@ -64,6 +64,42 @@ class MyCartTile extends StatelessWidget {
             ],
           ),
           //addons
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: SizedBox(
+              height: cartItem.selectedAddons.isEmpty ? 0 : 60,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: cartItem.selectedAddons.map((addon) => Padding(
+                  padding: const EdgeInsets.only(right: 8.0),
+                  child: FilterChip(
+                    label: Row(
+                      children: [
+                        //addon name
+                        Text(addon.name),
+                              
+                        SizedBox(width: 16,),
+                        //addon price
+                        Text("("+addon.price.toString()+" LKR)"),
+                              
+                      ],
+                    ),
+                    shape: StadiumBorder(
+                      side: BorderSide(
+                        color: Theme.of(context).colorScheme.tertiary,
+                      )
+                    ),
+                    onSelected: (value) {},
+                    backgroundColor: Theme.of(context).colorScheme.secondary,
+                    labelStyle: TextStyle(
+                      color: Theme.of(context).colorScheme.tertiary,
+                      fontSize: 12,
+                    ),
+                  ),
+                )).toList(),
+              ),
+            ),
+          )
 
         ],
       ),
