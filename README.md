@@ -1,17 +1,7 @@
-# blend_bristo
+# Blend-Bristo : The Online Coffee Shop
 
-A new Flutter project.
+<div align="center">
+  <img src="https://github.com/Rizz-33/Blend-Bristo/blob/main/lib/images/LogoColored.png" align="center" style="width: 75%; height: 25%" />
+</div>
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# Blend-Bristo
+Embark on a seamless journey with my latest creation – a Flutter-powered online delivering app! Dive into a user-friendly experience with hassle-free login and signup capabilities, all meticulously crafted by me. Personalize your app with customizable Light Mode and Dark Mode options, tailored to your preferences. Enjoy the convenience of changing your delivery address on-the-go with just a few taps, a feature I've personally designed to enhance user experience. Explore a diverse range of culinary delights with my intuitive tabbed interface, offering five distinct categories of food. Streamline your ordering process with effortless cart management and secure checkout, meticulously implemented by me and powered by card payment integration. Receive instant order receipts for every transaction, seamlessly synced with my Firestore database for convenient order history tracking. Join me in revolutionizing the online delivery landscape today!
