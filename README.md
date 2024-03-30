@@ -32,5 +32,5 @@ Contributions are welcome! If you'd like to contribute to Blend-Bristo, please f
 
 ## Feedback and Support
 
-If you have any feedback, questions, or need support with Blend-Bristo, please feel free to open an issue on this repository or share your knowledge under Ideas category in Discussions. Your feedback is invaluable and helps us improve the app for everyone.
+If you have any feedback, questions, or need support with Blend-Bristo, please feel free to open an issue on this repository or share your ideas on new features under Ideas category in Discussions. Your feedback is invaluable and helps us improve the app for everyone.
 
